@@ -3,18 +3,8 @@ import random
 import re
 import urllib.request
 import requests
-import speech_recognition as sr
-import pyttsx3 as tts
 import sys
 from datetime import datetime
-
-reconizer = sr.Recognizer()
-
-speeker = tts.init()
-speeker.setProperty('rate', 150)
-voices = speeker.getProperty('voices')
-print(voices)
-speeker.setProperty('voice', voices[1]. id)
 
 #time
 now = datetime.now()
@@ -59,8 +49,7 @@ elif not "0" in current_time1:
     current_time10 = current_time1
     current_time1 = f":{current_time10}"
 
-speeker.say(f"good {mn} sir its {current_time2}{current_time1} {ampm}")
-speeker.runAndWait()
+print(f"good {mn} sir its {current_time2}{current_time1} {ampm}")
 
 data = []
 
